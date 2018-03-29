@@ -2,7 +2,7 @@ import React from 'react'
 import AddPatient from '../containers/AddPatient'
 import PatientsList from '../containers/PatientsList'
 import Filters from '../containers/Filters'
-import EditPatientModal from "../containers/EditPatient";
+import EditPatientModal from "../containers/EditPatientModal";
 
 const App = () => (
   <div className="container">
