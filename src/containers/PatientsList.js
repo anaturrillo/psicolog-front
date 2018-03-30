@@ -2,11 +2,16 @@ import { connect } from 'react-redux'
 import PatientsList from '../components/PatientsList'
 
 const getPatients = (patients, filter) => {
+  const todayDate = new Date();
+  const today = todayDate.getDay().toString();
+
   switch (filter) {
     case 'DISPLAY_ALL':
       return patients;
     case 'DISPLAY_TODAY':
-      return patients;
+      return {
+        items: patients.items.filter(p => p.day === today)
+      };
     default:
       return patients
   }
