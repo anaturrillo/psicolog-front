@@ -23,6 +23,7 @@ class EditPatientModal extends React.Component {
   handleChange(key) {
     return (event) => {
       const currentState = this.state;
+
       this.setState({...currentState, [key]: event.target.value.toUpperCase()});
       //this.setState(ps => ({...ps, [key]: event.target.value}));
     }
@@ -40,6 +41,7 @@ class EditPatientModal extends React.Component {
   }
 
   render (){
+    console.log(this.state.day)
     return (
       <div id="editPatientModal" className="modal" role="dialog">
         <div className="modal-dialog" role="document">
@@ -79,13 +81,13 @@ class EditPatientModal extends React.Component {
 
                 <div className="form-group">
                   <label>Día de sesión</label>
-                  <select defaultValue={this.state.day} onChange={this.handleChange('day')} className="form-control form-control-lg" id="day" name="day">
-                    <option value="monday">Lunes</option>
-                    <option value="tuesday">Martes</option>
-                    <option value="wednesday">Miércoles</option>
-                    <option value="thursday">Jueves</option>
-                    <option value="friday">Viernes</option>
-                    <option value="saturday">Sábado</option>
+                  <select value={this.state.day} onChange={this.handleChange('day')} className="form-control form-control-lg" id="day" name="day">
+                    <option value="1">Lunes</option>
+                    <option value="2">Martes</option>
+                    <option value="3">Miércoles</option>
+                    <option value="4">Jueves</option>
+                    <option value="5">Viernes</option>
+                    <option value="6">Sábado</option>
                   </select>
                 </div>
 

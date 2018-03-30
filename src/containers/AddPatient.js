@@ -40,12 +40,12 @@ const AddPatient = ({ dispatch }) => {
       <div className="form-group">
         <label>Día de sesión</label>
         <select className="form-control form-control-lg" id="day" name="day" ref={node => day = node}>
-          <option value="monday">Lunes</option>
-          <option value="tuesday">Martes</option>
-          <option value="wednesday">Miércoles</option>
-          <option value="thursday">Jueves</option>
-          <option value="friday">Viernes</option>
-          <option value="saturday">Sábado</option>
+          <option value="1">Lunes</option>
+          <option value="2">Martes</option>
+          <option value="3">Miércoles</option>
+          <option value="4">Jueves</option>
+          <option value="5">Viernes</option>
+          <option value="6">Sábado</option>
         </select>
       </div>
 

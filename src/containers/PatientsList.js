@@ -3,7 +3,9 @@ import PatientsList from '../components/PatientsList'
 
 const getPatients = (patients, filter) => {
   switch (filter) {
-    case 'SHOW_ALL':
+    case 'DISPLAY_ALL':
+      return patients;
+    case 'DISPLAY_TODAY':
       return patients;
     default:
       return patients

@@ -4,19 +4,20 @@ import SubtractSession from '../containers/SubtractSession'
 import OpenEditPatient from '../containers/OpenEditPatient'
 
 const daysTranslation = {
-  monday: "Lunes",
-  tuesday: "Martes",
-  wednesday: "Miércoles",
-  thursday: "Jueves",
-  friday: "Viernes",
-  saturday: "Sábado"
+  "1": "Lunes",
+  "2": "Martes",
+  "3": "Miércoles",
+  "4": "Jueves",
+  "5": "Viernes",
+  "6": "Sábado"
 };
 
 const Patient = ({firstName, lastName, os, osNum, day, sessions, id}) => {
   const patient = {firstName, lastName, os, osNum, day, sessions, id};
+
   return (
     <tr>
-      <td>{firstName}, {lastName}</td>
+      <td>{lastName}, {firstName}</td>
       <td>{os}</td>
       <td>{osNum}</td>
       <td>

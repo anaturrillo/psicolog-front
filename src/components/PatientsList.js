@@ -12,7 +12,7 @@ const PatientsList = ({ patients }) => {
         <th>Nro. de Socio</th>
         <th>Sesiones restantes</th>
         <th>Día de sesión</th>
-        <th></th>
+        <th> </th>
       </tr>
       </thead>
       <tbody>
