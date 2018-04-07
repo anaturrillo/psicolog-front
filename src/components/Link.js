@@ -1,9 +1,10 @@
 import React from 'react'
+import {Button} from 'react-bootstrap'
 
 const Link = ({ active, children, onClick }) => (
-  <button onClick={onClick} disabled={active}>
+  <Button onClick={onClick} disabled={active}>
     {children}
-  </button>
+  </Button>
 );
 
 export default Link

@@ -1,0 +1,33 @@
+/*      BACKGROUND      */
+
+.red { background-color: red !important; }
+
+.blue { background-color: #2196f3 !important }
+.blue.light { background-color: #bbdefb !important }
+.blue.very.light { background-color: #e3f2fd !important }
+
+.orange { background-color: #ff9800 !important; }
+.orange.light { background-color: #ffa726 !important; }
+.orange.very.light { background-color: #ffb74d !important; }
+
+.amber{ background-color: #ffc107 !important; }
+.amber.light { background-color: #ffd54f !important; }
+.amber.very.light { background-color: #ffecb3 !important; }
+
+
+
+/*      TEXT      */
+
+.grey-text { color: #9e9e9e; }
+
+.blue-t { color: #2196f3 !important }
+.blue-t.light { color: #bbdefb !important }
+.blue-t.very.light { color: #e3f2fd !important }
+
+.orange-t { color: #ff9800 !important; }
+.orange-t.light { color: #ffa726 !important; }
+.orange-t.very.light { color: #ffb74d !important; }
+
+.amber-t{ color: #ffc107 !important; }
+.amber-t.light { color: #ffd54f !important; }
+.amber-t.very.light { color: #ffecb3 !important; }

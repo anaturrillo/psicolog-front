@@ -14,7 +14,7 @@ export const deletePatient = (patientId) => ({
 });
 
 export const openEditPatient = (patient) => ({
-  type: 'OPENT_EDITION',
+  type: 'OPEN_EDITION',
   patient
 });
 // ARMAR (ver como funcionaria)

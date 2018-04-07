@@ -1,10 +1,11 @@
 import React from 'react'
 import Patient from './Patient'
+import {Table} from 'react-bootstrap'
 
 const PatientsList = ({ patients }) => {
 
   return (
-    <table className="table table-bordered">
+    <Table bordered condensed hover>
       <thead className="thead-light">
       <tr>
         <th>Nombre</th>
@@ -22,7 +23,7 @@ const PatientsList = ({ patients }) => {
       />
       )}
       </tbody>
-    </table>
+    </Table>
   )
 };
 

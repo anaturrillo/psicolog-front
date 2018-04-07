@@ -1,22 +1,32 @@
 import React from 'react'
-import AddPatient from '../containers/AddPatient'
 import PatientsList from '../containers/PatientsList'
 import Filters from '../containers/Filters'
-import EditPatientModal from "../containers/EditPatientModal";
+import EditPatientModal from "../containers/EditPatient";
+import AddPatientForm from "../containers/AddPatientModal";
+import {Grid, Row, Col, Navbar, Nav, NavItem} from 'react-bootstrap'
 
 const App = () => (
-  <div className="container">
-    <div className="row">
-      <div className="col-4">
-        <EditPatientModal />
-        <AddPatient/>
-      </div>
-      <div className="col-8">
-        <Filters/>
+  <Grid>
+    <Navbar fixedTop={true}>
+      <Nav>
+        <NavItem>
+          <Filters/>
+        </NavItem>
+        <NavItem>
+          <AddPatientForm />
+        </NavItem>
+      </Nav>
+    </Navbar>
+
+    <Row className="show-grid content">
+      <Col md={7}>
         <PatientsList />
-      </div>
-    </div>
-  </div>
+      </Col>
+      <Col md={5}>
+        <EditPatientModal />
+      </Col>
+    </Row>
+  </Grid>
 );
 
 export default App

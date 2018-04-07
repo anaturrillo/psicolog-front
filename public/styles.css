@@ -1,0 +1,22 @@
+/*      GENERICS      */
+
+button {
+    background-image: none !important;
+    border: 1px solid #bdbdbd !important;
+    text-shadow: none !important;
+}
+
+.right {
+    float: right !important;
+}
+
+
+/*      SPECIFICS      */
+
+.patientListActions { min-width: 144px; }
+.container { width: 100% }
+.content { padding-top: 75px; }
+.modal-body { padding-bottom: 50px; }
+
+
+

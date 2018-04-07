@@ -1,16 +1,17 @@
 import React from 'react'
 import FilterLink from './FilterLink'
+import {ButtonToolbar} from 'react-bootstrap'
+
 
 const Filters = () => (
-  <div>
-    <span>Show: </span>
+  <ButtonToolbar>
     <FilterLink filter="DISPLAY_ALL">
-      Todos
+      Ver todos los pacientes
     </FilterLink>
     <FilterLink filter="DISPLAY_TODAY">
-      Los de hoy
+      Ver pacientes de hoy
     </FilterLink>
-  </div>
+  </ButtonToolbar>
 );
 
 export default Filters

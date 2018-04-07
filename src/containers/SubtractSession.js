@@ -1,18 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { subtractOneSession, addOneSession } from '../actions'
+import {ButtonToolbar, Button} from 'react-bootstrap'
 
 const SubtractSession = (props) => {
   return (
-    <span>
-      <button onClick={() => props.dispatch(subtractOneSession(props.patientId))}>
+    <ButtonToolbar className="right">
+      <Button onClick={() => props.dispatch(subtractOneSession(props.patientId))}>
         -
-      </button>
+      </Button>
 
-      <button onClick={() => props.dispatch(addOneSession(props.patientId))}>
+      <Button onClick={() => props.dispatch(addOneSession(props.patientId))} className="very light amber">
         +
-      </button>
-    </span>
+      </Button>
+    </ButtonToolbar>
 
   )
 };
