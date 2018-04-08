@@ -13,19 +13,21 @@ export const deletePatient = (patientId) => ({
   patientId
 });
 
-export const openEditPatient = (patient) => ({
-  type: 'OPEN_EDITION',
-  patient
+export const displayComponent = (patient, component) => ({
+  type: 'DISPLAY',
+  patient,
+  component
 });
+
 // ARMAR (ver como funcionaria)
 export const addSession = (patient) => ({
   type: 'ADD_SESSION',
   patient
 });
 
-export const subtractOneSession = (patientId) => ({
+export const subtractOneSession = (session) => ({
   type: 'SUBTRACT_SESSION',
-  patientId
+  session
 });
 
 export const addOneSession = (patientId) => ({
@@ -36,4 +38,10 @@ export const addOneSession = (patientId) => ({
 export const changeFilter = filter => ({
   type: 'SET_FILTER',
   filter
+});
+
+export const setContent = (patient, component) => ({
+  type: 'SET_CONTENT',
+  patient,
+  component
 });

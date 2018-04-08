@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Popover, Tooltip, Modal, OverlayTrigger} from 'react-bootstrap'
+import {Button, Modal} from 'react-bootstrap'
 import PatientForm from './PatientForm'
 
 class AddPatientModal extends React.Component {
@@ -24,12 +24,6 @@ class AddPatientModal extends React.Component {
   }
 
   render (){
-    const popover = (
-    <Popover id="modal-popover" title="popover">
-      very popover. such engagement
-    </Popover>
-    );
-    const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
 
     return (
       <div>

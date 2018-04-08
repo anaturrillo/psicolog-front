@@ -1,6 +1,7 @@
 const addPatient = function (currentState, action) {
   const itemId = currentState.nextId;
   return {
+    ...currentState,
     items: [
       ...currentState.items,
       {
@@ -14,23 +15,29 @@ const addPatient = function (currentState, action) {
 
 const deletePatient = function (currentState, action) {
  return {
+  ...currentState,
    items: currentState
     .items
     .filter(function (patient) {
       return patient.id !== action.patientId
-    }),
-    nextId: currentState.nextId
+    })
   };
 };
 
-const subtractOneSession = function (currentState, action) {
+const logSession = function (currentState, action) {
+
   const newPatientList = [].concat(currentState.items);
-  const editedPatient = newPatientList.find(e => e.id === action.patientId);
+  const editedPatient = newPatientList.find(e => e.id === action.session.patientId);
   editedPatient.sessions = editedPatient.sessions > 0 ? editedPatient.sessions - 1: 0;
+  const currentLog = currentState.logs || [];
+
+  const logs = [].concat(currentLog, [{...action.session, id: currentState.nextLogId}]);
 
   return {
+    ...currentState,
     items:newPatientList,
-    nextId: currentState.nextId
+    logs,
+    nextLogId: currentState.nextLogId + 1
   }
 };
 
@@ -40,8 +47,8 @@ const addOneSession = function (currentState, action) {
   editedPatient.sessions = editedPatient.sessions + 1;
 
   return {
-    items:newPatientList,
-    nextId: currentState.nextId
+    ...currentState,
+    items:newPatientList
   }
 };
 
@@ -52,10 +59,19 @@ const editPatient = function (currentState, action) {
   return currentState
 };
 
+const setContent = function (currentState, action) {
+  return {
+    ...currentState,
+    contentComponent: action.component,
+    patient: action.patient
+  }
+};
+
 export const getAction = {
   'ADD_PATIENT': addPatient,
   'DELETE_PATIENT': deletePatient,
   'EDIT_PATIENT':editPatient,
-  'SUBTRACT_SESSION':subtractOneSession,
-  'ADD_SESSION':addOneSession
+  'SUBTRACT_SESSION':logSession,
+  'ADD_SESSION':addOneSession,
+  'SET_CONTENT': setContent
 };

@@ -1,5 +1,4 @@
 import React from 'react'
-import {getPatient} from './helpers/getPatients'
 import {editPatient} from "../actions";
 import {connect} from "react-redux";
 import {Button} from "react-bootstrap"
@@ -8,7 +7,7 @@ class EditPatient extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false,
+      component: '',
       patient :{
         firstName:'',
         lastName: '',
@@ -49,19 +48,19 @@ class EditPatient extends React.Component {
     const currentState = this.state;
     this.setState({
       ...currentState,
-        visible: false
+        component: ''
     })
   }
 
   componentWillReceiveProps(nextProps){
     this.setState({
       patient: nextProps.patientToEdit,
-      visible: nextProps.editionVisible
+      component: nextProps.component
     })
   }
 
   render (){
-    if (this.state.visible){
+    if (this.state.component === 'edit'){
       return (
         <div>
           <h3>Editar los datos de {this.state.patient.firstName} {this.state.patient.lastName}</h3>
@@ -104,7 +103,7 @@ class EditPatient extends React.Component {
                 </select>
               </div>
               <div className="right">
-                <Button onClick={this.handleSubmit} className="very light blue">Guardar</Button>
+                <Button onClick={this.handleSubmit} className="very light blu">Guardar</Button>
                 <Button onClick={this.hideForm}>Cancelar</Button>
               </div>
 
@@ -123,7 +122,7 @@ class EditPatient extends React.Component {
 const mapStateToProps = state => {
   return {
     patientToEdit:state.edition.patientToEdit,
-    editionVisible:state.edition.editionVisible
+    component:state.edition.component
   }
 };
 

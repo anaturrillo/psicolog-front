@@ -10,13 +10,27 @@ button {
     float: right !important;
 }
 
+.tag {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.width100prct {
+    width: 100%;
+}
 
 /*      SPECIFICS      */
 
-.patientListActions { min-width: 144px; }
+.patientListActions { min-width: 200px; }
 .container { width: 100% }
 .content { padding-top: 75px; }
 .modal-body { padding-bottom: 50px; }
+.sessionActions { width: 75px }
 
 
 

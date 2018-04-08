@@ -1,10 +1,10 @@
-const edition = (state = {patientToEdit:{}, editionVisible:false}, action) => {
+const edition = (state = {patientToEdit:{}, component:''}, action) => {
 
   switch (action.type) {
-    case 'OPEN_EDITION':
+    case 'DISPLAY':
       return {
         patientToEdit: action.patient,
-        editionVisible: true
+        component: action.component
       };
     default:
       return state

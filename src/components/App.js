@@ -1,9 +1,9 @@
 import React from 'react'
+import {Grid, Row, Col, Navbar, Nav, NavItem} from 'react-bootstrap'
 import PatientsList from '../containers/PatientsList'
 import Filters from '../containers/Filters'
-import EditPatientModal from "../containers/EditPatient";
+import Content from './Content'
 import AddPatientForm from "../containers/AddPatientModal";
-import {Grid, Row, Col, Navbar, Nav, NavItem} from 'react-bootstrap'
 
 const App = () => (
   <Grid>
@@ -23,7 +23,7 @@ const App = () => (
         <PatientsList />
       </Col>
       <Col md={5}>
-        <EditPatientModal />
+        <Content />
       </Col>
     </Row>
   </Grid>

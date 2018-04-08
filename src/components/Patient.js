@@ -1,8 +1,9 @@
 import React from 'react'
 import DeletePatient from '../containers/DeletePatient'
-import SubtractSession from '../containers/SubtractSession'
+import SessionActions from '../containers/SessionActions'
 import OpenEditPatient from '../containers/OpenEditPatient'
-import {ButtonToolbar} from 'react-bootstrap'
+import OpenLog from '../containers/OpenLog'
+import {ButtonGroup} from 'react-bootstrap'
 const daysTranslation = {
   "1": "Lunes",
   "2": "Martes",
@@ -22,14 +23,15 @@ const Patient = ({firstName, lastName, os, osNum, day, sessions, id}) => {
       <td>{osNum}</td>
       <td>
         {sessions}
-        <SubtractSession sessions={sessions} patientId={id} />
+        <SessionActions sessions={sessions} patientId={id} />
       </td>
       <td>{daysTranslation[day]}</td>
       <td className="patientListActions">
-        <ButtonToolbar>
+        <ButtonGroup>
           <DeletePatient patientId={id} />
           <OpenEditPatient patient={patient}/>
-        </ButtonToolbar>
+          <OpenLog patient={patient}/>
+        </ButtonGroup>
       </td>
     </tr>
   )
